@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>MusicPlayer</title>
+    <style>
+        a {
+            text-decoration: none;
+        }
+        ul.music-list-wrap {
+            padding: 0;
+        }
+        .wrap {
+            border: 1px solid #ccc;
+            padding: 0 20px;
+            width: 500px;
+        }
+        .music-list-wrap .selected {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+<div id="MusicPlayer" class="player-wrap">
+    <h2>Music Player</h2>
+    <div class="wrap player-ui-wrap">
+        <p>
+            <span class="music-title">노래 제목</span> - <span class="music-artist">가수명</span>
+        </p>
+        <p>
+            <span class="music-playtime">00:00</span>
+        </p>
+        <!-- [D] 재생 버튼을 누르면 '재생'/'일시정지' 문구가 토글됨 -->
+        <p>
+            <button class="player-play-btn">재생</button> <button class="player-stop-btn">중지</button> <button class="player-prev-btn">이전곡</button> <button class="player-next-btn">다음곡</button>
+        </p>
+    </div>
+
+    <h2>Play List</h2>
+    <div class="wrap">
+        <ul class="music-list-wrap">
+            <li>
+                <a href="#"><span class="music-playtime">[00:00]</span> <span class="music-title">노래 제목</span><span class="music-artist">(가수명)</span></a>
+            </li>
+            <!-- [D] 재생 중인 목록에 selected 클래스 추가 -->
+            <li class="selected">
+                <a href="#"><span class="music-playtime">[00:00]</span> <span class="music-title">노래 제목</span><span class="music-artist">(가수명)</span></a>
+            </li>
+            <li>
+                <a href="#"><span class="music-playtime">[00:00]</span> <span class="music-title">노래 제목</span><span class="music-artist">(가수명)</span></a>
+            </li>
+            <li>
+                <a href="#"><span class="music-playtime">[00:00]</span> <span class="music-title">노래 제목</span><span class="music-artist">(가수명)</span></a>
+            </li>
+            <li>
+                <a href="#"><span class="music-playtime">[00:00]</span> <span class="music-title">노래 제목</span><span class="music-artist">(가수명)</span></a>
+            </li>
+            <li>
+                <a href="#"><span class="music-playtime">[00:00]</span> <span class="music-title">노래 제목</span><span class="music-artist">(가수명)</span></a>
+            </li>
+            <li>
+                <a href="#"><span class="music-playtime">[00:00]</span> <span class="music-title">노래 제목</span><span class="music-artist">(가수명)</span></a>
+            </li>
+            <li>
+                <a href="#"><span class="music-playtime">[00:00]</span> <span class="music-title">노래 제목</span><span class="music-artist">(가수명)</span></a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    var list = [
+        {
+            id : 'm001',
+            title: 'IDOL',
+            artist: '방탄소년단',
+            playtime: '03:42'
+        },
+        {
+            id : 'm002',
+            title: 'AND I',
+            artist: '뉴이스트 W',
+            playtime: '03:54'
+        },
+        {
+            id : 'm003',
+            title: 'Way Back Home',
+            artist: '숀',
+            playtime: '03:34'
+        },
+        {
+            id : 'm004',
+            title: 'Dejavu',
+            artist: '뉴이스트 W',
+            playtime: '03:19'
+        },
+        {
+            id : 'm005',
+            title: 'Power Up',
+            artist: '레드벨벳',
+            playtime: '03:22'
+        },
+        {
+            id : 'm006',
+            title: 'Euphoria',
+            artist: '방탄소년단',
+            playtime: '03:48'
+        },
+        {
+            id : 'm007',
+            title: 'Dance The Night Away',
+            artist: '트와이스',
+            playtime: '03:00'
+        },
+        {
+            id : 'm008',
+            title: '뚜두뚜두 (DDU-DU DDU-DU)',
+            artist: 'BLACKPINK',
+            playtime: '03:29'
+        },
+        {
+            id : 'm009',
+            title: '모든 날, 모든 순간',
+            artist: '폴킴',
+            playtime: '03:30'
+        },
+        {
+            id : 'm010',
+            title: '너나 해',
+            artist: '마마무',
+            playtime: '03:16'
+        }
+    ];
+</script>
+<script src="./js/PlayListView.js"></script>
+<script src="./js/PlayListModel.js"></script>
+<script src="./js/PlayerView.js"></script>
+<script src="./js/PlayerController.js"></script>
+<script src="./js/player.js"></script>
+</body>
+</html>
